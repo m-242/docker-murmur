@@ -18,4 +18,4 @@ VOLUME ["/data", "/config"]
 
 # Run murmur
 ENTRYPOINT ["/opt/murmur/murmur.x86", "-fg", "-v"]
-CMD ["-ini", "/config/murmur.ini", "-supw", "${MURMUR_SUPW}"]
+CMD ["-ini", "/config/murmur.ini", "-supw ${MURMUR_SUPW}"]
