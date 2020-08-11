@@ -2,7 +2,7 @@
 
 This is a barebones docker container built using busybox and a statically compiled version of murmurd from the [official website](https://www.mumble.info).
 
-It's configured to look for the configuration file in `/etc/murmur.ini`.
+It's forked from [mattikus](https://github.com/mattikus/docker-murmur)'s version to add a volume containing the configuration file.
 
 ## Usage
 

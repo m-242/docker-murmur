@@ -17,7 +17,8 @@ EXPOSE 64738/tcp 64738/udp
 
 # Read murmur.ini and murmur.sqlite from /data/
 VOLUME ["/data"]
+VOLUME ["/config"]
 
 # Run murmur
 ENTRYPOINT ["/opt/murmur/murmur.x86", "-fg", "-v"]
-CMD ["-ini", "/etc/murmur.ini"]
+CMD ["-ini", "/config/murmur.ini"]
