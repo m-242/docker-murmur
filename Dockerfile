@@ -9,8 +9,6 @@ RUN bzcat /opt/murmur-static_x86-${version}.tar.bz2 | tar -x -C /opt -f - && \
     rm /opt/murmur-static_x86-${version}.tar.bz2 && \
     mv /opt/murmur-static_x86-${version} /opt/murmur
 
-# Copy in our slightly tweaked INI which points to our volume
-COPY murmur.ini /etc/murmur.ini
 
 # Forward apporpriate ports
 EXPOSE 64738/tcp 64738/udp
