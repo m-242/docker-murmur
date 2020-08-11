@@ -14,8 +14,8 @@ RUN bzcat /opt/murmur-static_x86-${version}.tar.bz2 | tar -x -C /opt -f - && \
 EXPOSE 64738/tcp 64738/udp
 
 # Read murmur.ini and murmur.sqlite from /data/
-VOLUME ["/data", "/config"]
+#VOLUME ["/data", "/config"]
 
 # Run murmur
 ENTRYPOINT ["/opt/murmur/murmur.x86", "-fg", "-v"]
-CMD ["-ini", "/config/murmur.ini", "-supw ${MURMUR_SUPW}"]
+CMD ["-ini", "/config/murmur.ini"]
